@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MenuFatima.View.MenuItemPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+                    <Image Source="bannerDesayuno" ></Image>
+                </StackLayout>
+                <StackLayout>
+                    <Picker 
+                            Title="Seleccione el tipo de evento"
+                            ItemsSource="{Binding  ListCategoria}"
+                            ItemDisplayBinding="{Binding nomcategoria}"
+                            SelectedItem="{Binding SelectedCategory}"
+                            >
+                    </Picker>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Elija el combo que mas le guste!!"
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           FontSize="24"
+                           HorizontalOptions="CenterAndExpand">
+                    </Label>
+                </StackLayout>
+                <ListView ItemsSource="{Binding ListMenu}"
+                          HasUnevenRows="True"
+                          SeparatorVisibility="None"
+                          BackgroundColor="White"
+                          >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell >
+                                <StackLayout Padding="20" BackgroundColor="White">
+                                    <Frame CornerRadius="20" Padding="5">
+                                        <StackLayout Orientation="Horizontal">
+                                            <BoxView BackgroundColor="#FF5722" WidthRequest="4"></BoxView>
+                                            <Grid VerticalOptions="CenterAndExpand">
+                                                <Grid.ColumnDefinitions>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition></RowDefinition>
+                                                    <RowDefinition></RowDefinition>
+                                                    <RowDefinition></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <StackLayout Grid.Row="0" Orientation="Horizontal">
+                                                    <Label
+                                            Text="Combo 1"
+                                            TextColor="#FF5722"
+                                            FontAttributes="Bold"
+                                            FontSize="20"></Label>
+                                                    <Label 
+                                            Text="$2.50"
+                                           HorizontalOptions="EndAndExpand"
+                                           TextColor="#FF5722"
+                                            FontAttributes="Bold"
+                                            FontSize="20"></Label>
+                                                </StackLayout>
+                                                <StackLayout Grid.Row="1">
+                                                    <Label Text="Frijoles, Platano, Café, Pan frances"></Label>
+                                                </StackLayout>
+                                                <StackLayout  Grid.Row="2">
+                                                    <Button BackgroundColor="#FF5722" 
+                                                            TextColor="White"
+                                                            HorizontalOptions="EndAndExpand"
+                                                            BorderRadius="20"
+                                                            BorderColor="Transparent"
+                                                            Text="Ordernar"
+                                                            ></Button>
+                                                </StackLayout>
+                                            </Grid>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

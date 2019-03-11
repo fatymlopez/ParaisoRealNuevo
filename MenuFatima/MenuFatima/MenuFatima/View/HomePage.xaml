@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MenuFatima.View.HomePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="White">
+                <!-- Place new controls here -->
+
+
+                <StackLayout Padding="20">
+                    <Label Text="Que de desea ordenar?"
+                   FontAttributes="Bold"
+                   FontSize="32"
+                   HorizontalOptions="CenterAndExpand"></Label>
+                </StackLayout>
+                <StackLayout Padding="20">
+                    <!--DESAYUNO-->
+                    <Frame 
+                BackgroundColor="#FF5722" 
+                CornerRadius="20">
+                        <StackLayout>
+                            <Image Source="desayuno"></Image>
+                            <Label 
+                        Text="Desayuno" 
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="38"
+                        HorizontalOptions="CenterAndExpand"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <!--ALMUERZO-->
+                    <Frame 
+                BackgroundColor="#F44336" 
+                CornerRadius="20">
+                        <StackLayout>
+                            <Image Source="almuerzo"></Image>
+                            <Label 
+                        Text="Almuerzo" 
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="38"
+                        HorizontalOptions="CenterAndExpand"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <!--ANTOJITOS-->
+                    <Frame 
+                BackgroundColor="#FFC107" 
+                CornerRadius="20">
+                        <StackLayout>
+                            <Image Source="antojitos"></Image>
+                            <Label 
+                        Text="Antojitos" 
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="38"
+                        HorizontalOptions="CenterAndExpand"></Label>
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
